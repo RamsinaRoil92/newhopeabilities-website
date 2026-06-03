@@ -1,0 +1,53 @@
+import { Link } from 'react-router-dom'
+import { footerLinks, navigationLinks } from '../../content/navigation'
+import { site } from '../../content/site'
+
+export function Footer() {
+  return (
+    <footer className="contrast-surface border-t border-surface-variant bg-surface-container-lowest text-primary-container">
+      <div className="mx-auto grid w-full max-w-container-max gap-8 px-margin-mobile py-12 md:grid-cols-[1.2fr_1fr_1fr] md:px-margin-desktop">
+        <div>
+          <p className="text-xl font-bold">{site.name}</p>
+          <p className="contrast-muted mt-stack-sm max-w-sm text-body-md text-on-surface-variant">
+            Warm, person-centred NDIS support across {site.serviceArea}.
+          </p>
+          <p className="contrast-muted mt-stack-md text-sm text-on-surface-variant">
+            © {site.year} {site.name}. {site.ndisStatus}.
+          </p>
+        </div>
+
+        <nav aria-label="Footer navigation">
+          <p className="mb-stack-sm text-label-caps font-semibold uppercase text-primary-container">Pages</p>
+          <ul className="space-y-2">
+            {navigationLinks.map((link) => (
+              <li key={link.to}>
+                <Link className="rounded text-on-surface-variant transition-colors hover:text-primary-container" to={link.to}>
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <nav aria-label="Helpful links">
+          <p className="mb-stack-sm text-label-caps font-semibold uppercase text-primary-container">Helpful Links</p>
+          <ul className="space-y-2">
+            {footerLinks.map((link) => (
+              <li key={link.label}>
+                {link.to.endsWith('.xml') ? (
+                  <a className="rounded text-on-surface-variant transition-colors hover:text-primary-container" href={link.to}>
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link className="rounded text-on-surface-variant transition-colors hover:text-primary-container" to={link.to}>
+                    {link.label}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  )
+}

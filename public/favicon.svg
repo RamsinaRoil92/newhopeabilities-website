@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">NewHope Abilities</title>
+  <rect width="64" height="64" rx="14" fill="#1b365d" />
+  <path d="M17 44V20h7l16 16V20h7v24h-7L24 28v16z" fill="#ffffff" />
+  <circle cx="47" cy="17" r="5" fill="#c5e7d6" />
+</svg>
