@@ -1,0 +1,38 @@
+{
+  "name": "newhope-abilities-website",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Local-first React, Vite, and Tailwind CSS website for NewHope Abilities.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "generate:images": "node scripts/generate-style-images.mjs && npm run optimise:images",
+    "optimise:images": "node scripts/optimise-images.mjs",
+    "lint": "eslint .",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "lucide-react": "^1.14.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-helmet-async": "^3.0.0",
+    "react-router-dom": "^7.14.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/forms": "^0.5.11",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^10.2.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.5.0",
+    "postcss": "^8.5.14",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^3.4.17",
+    "vite": "^8.0.10"
+  }
+}
