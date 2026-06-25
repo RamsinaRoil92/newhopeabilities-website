@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NewHope Abilities - Empowering You to Live Your Best Life</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#1a1b1e",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#002046",
+                      "on-tertiary": "#ffffff",
+                      "outline-variant": "#c4c6cf",
+                      "on-tertiary-container": "#a09f9a",
+                      "surface": "#faf9fd",
+                      "surface-variant": "#e3e2e6",
+                      "primary-fixed": "#d6e3ff",
+                      "surface-bright": "#faf9fd",
+                      "on-tertiary-fixed": "#1b1c19",
+                      "surface-container-low": "#f4f3f7",
+                      "inverse-primary": "#aec7f7",
+                      "surface-container-highest": "#e3e2e6",
+                      "primary-container": "#1b365d",
+                      "tertiary-fixed-dim": "#c8c6c2",
+                      "on-tertiary-fixed-variant": "#474744",
+                      "on-secondary-fixed-variant": "#2f4d40",
+                      "secondary-fixed": "#c8ead9",
+                      "on-primary-fixed-variant": "#2e476f",
+                      "inverse-on-surface": "#f1f0f4",
+                      "on-primary-container": "#87a0cd",
+                      "on-secondary-fixed": "#012016",
+                      "tertiary": "#20211e",
+                      "primary-fixed-dim": "#aec7f7",
+                      "secondary-container": "#c5e7d6",
+                      "tertiary-container": "#363633",
+                      "surface-container-high": "#e9e7eb",
+                      "error": "#ba1a1a",
+                      "secondary": "#466557",
+                      "surface-dim": "#dad9dd",
+                      "on-surface-variant": "#44474e",
+                      "surface-container": "#efedf1",
+                      "inverse-surface": "#2f3033",
+                      "background": "#faf9fd",
+                      "on-secondary": "#ffffff",
+                      "on-surface": "#1a1b1e",
+                      "on-primary-fixed": "#001b3d",
+                      "outline": "#74777f",
+                      "error-container": "#ffdad6",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#adcebe",
+                      "tertiary-fixed": "#e4e2dd",
+                      "surface-tint": "#465f88",
+                      "on-secondary-container": "#4a695c",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "48px",
+                      "stack-sm": "8px",
+                      "stack-lg": "32px",
+                      "unit": "8px",
+                      "section-gap": "80px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "stack-md": "16px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "label-caps": [
+                              "Lexend"
+                      ],
+                      "button": [
+                              "Lexend"
+                      ],
+                      "h2": [
+                              "Lexend"
+                      ],
+                      "body-lg": [
+                              "Lexend"
+                      ],
+                      "display": [
+                              "Lexend"
+                      ],
+                      "h1": [
+                              "Lexend"
+                      ],
+                      "body-md": [
+                              "Lexend"
+                      ],
+                      "h3": [
+                              "Lexend"
+                      ]
+              },
+              "fontSize": {
+                      "label-caps": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "button": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "h2": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "h1": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "h3": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<header class="bg-surface-container-lowest text-[#1B365D] font-['Lexend'] text-base font-medium shadow-sm fixed top-0 w-full z-50 border-b-2 border-surface-container-high transition-colors">
+<div class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto w-full">
+<div class="text-2xl font-bold text-[#1B365D]">
+                NewHope Abilities
+            </div>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="text-[#1B365D] border-b-2 border-[#1B365D] pb-1 hover:bg-slate-50 transition-colors h-full flex items-center" href="#">Home</a>
+<a class="text-slate-600 hover:text-[#1B365D] hover:bg-slate-50 transition-colors h-full flex items-center" href="#">Services</a>
+<a class="text-slate-600 hover:text-[#1B365D] hover:bg-slate-50 transition-colors h-full flex items-center" href="#">About Us</a>
+<a class="text-slate-600 hover:text-[#1B365D] hover:bg-slate-50 transition-colors h-full flex items-center" href="#">Contact</a>
+</nav>
+<button class="bg-primary-container text-surface-container-lowest font-button text-button px-6 py-3 rounded-lg hover:bg-primary transition-colors hidden md:block min-h-[48px]">
+                Enquire Now
+            </button>
+<button class="md:hidden text-[#1B365D] p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative w-full bg-surface-container-low overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="" class="w-full h-full object-cover opacity-90" data-alt="A warm, candid photo of a professional NDIS support worker and an adult participant sitting together at a sunny cafe table in Melbourne, sharing coffee and smiling genuinely. The lighting is bright and natural, reflecting a 'people-first' approachable soft modernism aesthetic. The overall mood is dignified, supportive, and community-integrated. The color palette emphasizes soft natural tones, clear blue skies visible through the window, and deep navy accents in their clothing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8D99lnxG6nnUZGUIcawiTN6GB27AhtifZqoPIxD8OU7vgHK7GthEwI8zat84DlKtRYH7iMj3V8CBMqswJe439N3B-WEpfRHVq0Pt4Fe5SdwYCuoVBV76_PRKpLLsj6OnJXAnmAlGQ9y5CouhfiSnTjRS81WhuCuH5hUjDivcF4OK9mygZXon2G0mA5YcI_W8zmz9L0y1EPIQlP9iEqW_4dk2dWsLJft9tgvWnrmi0Fs145fRoPa5-wMQSdQ1FNG5dmYLQlsqQM2Y"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest/95 via-surface-container-lowest/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col justify-center min-h-[819px]">
+<div class="max-w-2xl">
+<h1 class="font-display text-display text-primary-container mb-stack-md">
+                        Empowering You to Live Your Best Life, Your Way.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-xl">
+                        Compassionate, person-centred NDIS support across Melbourne. We focus on building independence and meaningful community connections.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-stack-sm">
+<button class="bg-primary-container text-surface-container-lowest font-button text-button px-8 py-4 rounded-lg hover:bg-primary transition-colors min-h-[48px] shadow-sm shadow-primary-container/10">
+                            Explore Our Services
+                        </button>
+<button class="bg-transparent border-2 border-primary-container text-primary-container font-button text-button px-8 py-4 rounded-lg hover:bg-surface-container transition-colors min-h-[48px]">
+                            Meet Our Team
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="py-section-gap bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-stack-lg">
+<h2 class="font-h2 text-h2 text-primary-container mb-stack-sm">Our Core Values</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">The principles that guide every interaction and support plan we create.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Value Card 1 -->
+<div class="bg-surface-container-low rounded-xl p-stack-lg shadow-sm shadow-primary-container/5 hover:shadow-md transition-shadow border border-surface-variant">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-stack-md text-secondary">
+<span class="material-symbols-outlined" data-icon="accessibility_new">accessibility_new</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary-container mb-stack-sm">Dignity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We treat everyone with the utmost respect, honouring individual choices and preferences.</p>
+</div>
+<!-- Value Card 2 -->
+<div class="bg-surface-container-low rounded-xl p-stack-lg shadow-sm shadow-primary-container/5 hover:shadow-md transition-shadow border border-surface-variant">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-stack-md text-secondary">
+<span class="material-symbols-outlined" data-icon="directions_walk">directions_walk</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary-container mb-stack-sm">Independence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Empowering you to develop skills and confidence for greater self-reliance.</p>
+</div>
+<!-- Value Card 3 -->
+<div class="bg-surface-container-low rounded-xl p-stack-lg shadow-sm shadow-primary-container/5 hover:shadow-md transition-shadow border border-surface-variant">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-stack-md text-secondary">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary-container mb-stack-sm">Reliability</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Consistent, dependable support you can count on, when and where you need it.</p>
+</div>
+<!-- Value Card 4 -->
+<div class="bg-surface-container-low rounded-xl p-stack-lg shadow-sm shadow-primary-container/5 hover:shadow-md transition-shadow border border-surface-variant">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-stack-md text-secondary">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary-container mb-stack-sm">Community</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Fostering meaningful connections and active participation in local life.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Highlight -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-stack-md">
+<div>
+<h2 class="font-h2 text-h2 text-primary-container mb-stack-sm">Tailored Support Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Flexible NDIS solutions designed to meet your unique goals and daily needs.</p>
+</div>
+<button class="bg-transparent border-2 border-primary-container text-primary-container font-button text-button px-6 py-2 rounded-lg hover:bg-surface-container-highest transition-colors min-h-[48px]">
+                        View All Services
+                    </button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Service 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm shadow-primary-container/10 flex flex-col border border-surface-variant">
+<div class="h-48 bg-surface-variant relative">
+<img alt="" class="w-full h-full object-cover" data-alt="A bright, optimistic image showing an NDIS participant smiling while picking fresh produce at a local Melbourne community market, accompanied by a supportive worker. The scene is full of natural light, showcasing a supportive independence aesthetic. Vibrant fresh vegetables provide subtle colour pops against the deep navy UI styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk-IZlRzzIplhJOF0XQaQojK6D4PsGc6g_G_b-uyFYuaHg1zQl8fBraJYeMI3DoSZo4kDD0HifWoMPjbCYFAaDK4X4TKv5k0yUn2Yf7TtQVd_HZVN2QExeXQlEHoqriUn1Za9YYEweHhCdDOIixg-1dOBWjtJ366lK2hg_-tPPnWixclkV2TBWzzIzSaJW5hhP9GXHTElMRxwykIFmUNfA6p8C_-QacWBm7ueRvpGyMouGYZVx2mB9OX7Rf7_5VTVfRCXYeDltRTE"/>
+</div>
+<div class="p-stack-lg flex-grow flex flex-col">
+<h3 class="font-h3 text-h3 text-primary-container mb-stack-sm">Community Access</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">Support to explore your local area, attend social events, join clubs, or run errands safely and confidently.</p>
+<button class="text-primary-container font-button text-button flex items-center gap-2 hover:text-primary transition-colors group">
+                                Learn More <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm shadow-primary-container/10 flex flex-col border border-surface-variant">
+<div class="h-48 bg-surface-variant relative">
+<img alt="" class="w-full h-full object-cover" data-alt="A soft-focus, dignified image of a care worker assisting a participant with organizing their clean, modern home environment. The lighting is warm and reassuring, aligning with the brand's 'Soft Modernism' aesthetic. Deep navy accents in the home decor tie back to the primary brand colors. The mood is calm and respectful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq6Xe-3Nn1nEKNQ78OMqggPbqdrIkDlldn5pM5U8oZBmSBiiNztRGTCfl0IbR51Ky8vzaK0CQtfuV3eD4AfTrf_EhCiWziqFkSUxWT4KSXtYllcJnSn7_JK3-2lMT0ios3h-CM7gMrHOe8m8upxsLrfiAhYRm-Ak8FIcXxC1wLytBlRfGwKmIa_HfXOYUvOSw8hw7G1Ksry__aoVNkJ_K2zDFKBLszEHj09KXNkNuUBFglWMMm8rRn7w24fVaG8zZB64ew8r9pc1g"/>
+</div>
+<div class="p-stack-lg flex-grow flex flex-col">
+<h3 class="font-h3 text-h3 text-primary-container mb-stack-sm">Self-Care Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">Respectful, discreet assistance with personal routines, hygiene, dressing, and daily preparation.</p>
+<button class="text-primary-container font-button text-button flex items-center gap-2 hover:text-primary transition-colors group">
+                                Learn More <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm shadow-primary-container/10 flex flex-col border border-surface-variant">
+<div class="h-48 bg-surface-variant relative">
+<img alt="" class="w-full h-full object-cover" data-alt="A bright, organized modern kitchen where a support worker is happily helping a participant prepare a healthy meal. The environment feels spacious, breathable, and safe. The photography style uses soft ambient lighting, conveying a sense of reliability and human connection, fitting perfectly within the Soft Modernism design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMx7oCqQ-LMFyLZDcoGRW1d3rT-zaLhgC5uDyPJ8ScaRTmlYGnD7TQM5xt3dkAziDtIwmuN_H67Cg2zXdu-MTXtU2G8HolJ-f1LF3jFRAkeYLoTvjied4K6-DtJArsxsow8dWq9ZCHv8l4ZR0EyzmBVOJodue1PaKd2tqQ78KxERfAg-w6JnQd45dA_RAeGI5RI2J-ERc0pXSYCTTQc8uaALrLH50_YzzgKY2vWoRSRGOGEf4_lMiFwc5bhYGyLKli83X2WVW1IiM"/>
+</div>
+<div class="p-stack-lg flex-grow flex flex-col">
+<h3 class="font-h3 text-h3 text-primary-container mb-stack-sm">Household Tasks</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">Help maintaining a clean, safe, and comfortable living environment, including cleaning, laundry, and meal prep.</p>
+<button class="text-primary-container font-button text-button flex items-center gap-2 hover:text-primary transition-colors group">
+                                Learn More <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Focus Section -->
+<section class="py-section-gap bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-primary-container rounded-2xl overflow-hidden flex flex-col lg:flex-row shadow-md">
+<div class="lg:w-1/2 p-stack-lg md:p-section-gap flex flex-col justify-center text-surface-container-lowest">
+<h2 class="font-h2 text-h2 text-surface-container-lowest mb-stack-sm">Proudly Supporting Our Melbourne Community</h2>
+<p class="font-body-md text-body-md text-surface-container-low mb-stack-lg opacity-90">
+                            We are deeply rooted in the Melbourne community. Our local knowledge means we can connect you with the best accessible services, events, and networks in your specific area, from the inner city to the suburbs.
+                        </p>
+<button class="bg-surface-container-lowest text-primary-container font-button text-button px-6 py-3 rounded-lg hover:bg-surface-variant transition-colors self-start min-h-[48px]">
+                            Find Support Near You
+                        </button>
+</div>
+<div class="lg:w-1/2 h-64 lg:h-auto relative">
+<img alt="Melbourne landmark" class="w-full h-full object-cover" data-alt="A beautiful, vibrant wide shot of Flinders Street Station and Federation Square in Melbourne on a sunny day. The image is bright and welcoming, subtly emphasizing wide, accessible pathways and bustling, inclusive community spaces. The colors harmonise with the primary deep navy and soft light mode aesthetic of the site." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAezDD4F05HZXMSeneXTP3c6SD_HviGCdlzJDaJB3SNh_5xOotcZl6ryJ0s-kAx9wvFuYtycCDbXJyqQgBYWmAf0dh5LWZrQw7tli6LUUV5hmj1nSNo5kyDb0HSMyfkdHCt30WiOduOidukxwVdc4aaw9KVzik9A2fcAqzs9YSttlOhwJMuOWFC1nmPq8S6qwDE_-FwZqudoCwpnshbusa-l4ba_s0gvMSPo7tS5GmgYOtS-dtLn1TeuDUmWHj-mzV6YpNadb2Gr1M"/>
+<div class="absolute inset-0 bg-primary-container/20 mix-blend-multiply"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-slate-50 text-[#1B365D] font-['Lexend'] text-sm w-full py-12 px-8 flex flex-col md:flex-row justify-between gap-8 border-t border-slate-200">
+<div class="flex flex-col gap-4">
+<div class="text-xl font-bold text-[#1B365D]">
+                NewHope Abilities
+            </div>
+<p class="text-slate-500">
+                © 2024 NewHope Abilities. Registered NDIS Provider.
+            </p>
+</div>
+<nav class="flex flex-wrap gap-x-8 gap-y-4 items-center">
+<a class="text-slate-500 hover:text-[#1B365D] focus:ring-2 focus:ring-[#1B365D] rounded transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-[#1B365D] focus:ring-2 focus:ring-[#1B365D] rounded transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-[#1B365D] focus:ring-2 focus:ring-[#1B365D] rounded transition-colors" href="#">NDIS Practice Standards</a>
+<a class="text-slate-500 hover:text-[#1B365D] focus:ring-2 focus:ring-[#1B365D] rounded transition-colors" href="#">Site Map</a>
+</nav>
+</footer>
+</body></html>
