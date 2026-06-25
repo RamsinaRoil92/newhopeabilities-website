@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MapPin, Phone, Mail, Clock, CheckCircle, AlertCircle } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, CheckCircle } from 'lucide-react'
 import { Seo } from '../seo/Seo'
 import { site } from '../content/site'
 
@@ -61,17 +61,7 @@ export function Home() {
         </div>
       </section>
 
-      {/* ── REGISTRATION NOTICE ──────────────────────────── */}
-      <div className="bg-secondary-container">
-        <div className="mx-auto flex max-w-container-max flex-wrap items-center gap-3 px-margin-mobile py-4 md:px-margin-desktop">
-          <AlertCircle aria-hidden="true" className="h-5 w-5 shrink-0 text-on-secondary-container" />
-          <p className="text-body-md text-on-secondary-container">
-            <strong>Please note:</strong> NewHope Abilities is currently completing NDIS provider
-            registration. We are not yet a registered NDIS provider — we will update this page as
-            soon as registration is confirmed.
-          </p>
-        </div>
-      </div>
+
 
       {/* ── ABOUT US ─────────────────────────────────────── */}
       <section
@@ -98,9 +88,8 @@ export function Home() {
               community.
             </p>
             <p className="mt-4 text-body-lg text-on-surface-variant">
-              We are currently in the process of completing our NDIS provider registration. Once
-              registered, we will offer a range of supports tailored to individual goals and
-              aspirations across Greater Melbourne.
+              We are committed to offering supports tailored to individual goals and aspirations
+              across Greater Melbourne.
             </p>
           </div>
 
@@ -123,8 +112,8 @@ export function Home() {
               },
               {
                 icon: '📋',
-                title: 'Registering Now',
-                body: 'NDIS registration currently in progress — updates coming soon.',
+                title: 'Always Improving',
+                body: 'We continually grow our services to better support the Melbourne community.',
               },
             ].map(({ icon, title, body }) => (
               <div
@@ -154,11 +143,10 @@ export function Home() {
             id="services-heading"
             className="text-center text-h1 font-bold text-primary-container"
           >
-            What We Plan to Offer
+            What We Offer
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-center text-body-lg text-on-surface-variant">
-            Subject to NDIS registration, we intend to provide the following supports across Greater
-            Melbourne.
+            We provide the following supports across Greater Melbourne.
           </p>
 
           <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4" role="list">
@@ -190,10 +178,7 @@ export function Home() {
             ))}
           </ul>
 
-          <p className="mx-auto mt-8 max-w-lg text-center text-sm text-on-surface-variant">
-            * Services are contingent upon successful NDIS provider registration. Please enquire
-            below for updates.
-          </p>
+
         </div>
       </section>
 

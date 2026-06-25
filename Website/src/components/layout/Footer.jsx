@@ -25,7 +25,7 @@ export function Footer() {
             </li>
           </ul>
           <p className="mt-stack-md text-sm text-on-surface-variant">
-            © {site.year} {site.name}. {site.ndisStatus}.
+            © {site.year} {site.name}.
           </p>
         </div>
 

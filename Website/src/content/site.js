@@ -3,7 +3,7 @@ export const site = {
   legalName: 'NewHope Abilities',
   tagline: 'Compassionate support for people with disability — coming soon to Melbourne.',
   description:
-    'NewHope Abilities is a Melbourne-based disability support provider, currently completing NDIS provider registration. We are committed to delivering warm, person-centred care.',
+    'NewHope Abilities is a Melbourne-based disability support provider committed to delivering warm, person-centred care.',
   url: 'https://newhopeabilities.com.au',
   localUrl: 'http://localhost:5173',
   email: 'hello@newhopeabilities.com.au',
@@ -17,8 +17,7 @@ export const site = {
   addressCountry: 'AU',
   serviceArea: 'Greater Melbourne',
   year: new Date().getFullYear(),
-  ndisStatus: 'NDIS Registration in Progress',
-  ndisRegistered: false,
+
 }
 
 export const imagePrompts = [
