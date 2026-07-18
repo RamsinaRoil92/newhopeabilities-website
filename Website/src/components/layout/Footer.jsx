@@ -1,12 +1,13 @@
 import { MapPin, Mail } from 'lucide-react'
 import { site } from '../../content/site'
+import { SiteLogo } from './SiteLogo'
 
 export function Footer() {
   return (
     <footer className="border-t border-surface-variant bg-surface-container-lowest text-primary-container">
       <div className="mx-auto grid w-full max-w-container-max gap-8 px-margin-mobile py-12 md:grid-cols-[1.5fr_1fr] md:px-margin-desktop">
         <div>
-          <p className="text-xl font-bold">{site.name}</p>
+          <SiteLogo className="h-14" />
           <p className="mt-stack-sm max-w-sm text-body-md text-on-surface-variant">
             Compassionate disability support — proudly based in Melbourne, Victoria.
           </p>

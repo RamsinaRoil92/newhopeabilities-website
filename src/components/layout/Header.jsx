@@ -6,6 +6,7 @@ import { site } from '../../content/site'
 import { useFocusTrap } from '../../hooks/useFocusTrap'
 import { Button } from '../ui/Button'
 import { AccessibilityTools } from '../accessibility/AccessibilityTools'
+import { SiteLogo } from './SiteLogo'
 import { classNames } from '../../utils/classNames'
 
 function navLinkClasses({ isActive }) {
@@ -25,8 +26,8 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-surface-container-high bg-surface-container-lowest/95 shadow-sm backdrop-blur">
       <div className="mx-auto flex h-20 w-full max-w-container-max items-center justify-between gap-4 px-margin-mobile md:px-margin-desktop">
-        <Link to="/" className="shrink-0 rounded-lg text-xl font-bold text-primary-container md:text-2xl" aria-label={`${site.name} home`}>
-          {site.name}
+        <Link to="/" className="shrink-0 rounded-lg" aria-label={`${site.name} home`}>
+          <SiteLogo className="h-12 md:h-14" />
         </Link>
 
         <nav className="hidden items-center gap-2 lg:flex" aria-label="Main navigation">
