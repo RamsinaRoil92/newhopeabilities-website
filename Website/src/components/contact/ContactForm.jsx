@@ -7,6 +7,7 @@ const initialValues = {
   email: '',
   role: '',
   message: '',
+  company: '',
 }
 
 function validate(values) {
@@ -52,25 +53,76 @@ function FieldError({ id, message }) {
 export function ContactForm() {
   const [values, setValues] = useState(initialValues)
   const [errors, setErrors] = useState({})
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState('idle')
+  const [formError, setFormError] = useState('')
 
   function updateField(event) {
     const { name, value } = event.target
     setValues((currentValues) => ({ ...currentValues, [name]: value }))
     setErrors((currentErrors) => ({ ...currentErrors, [name]: undefined }))
+    setFormError('')
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
     const nextErrors = validate(values)
     setErrors(nextErrors)
-    setSubmitted(Object.keys(nextErrors).length === 0)
+
+    if (Object.keys(nextErrors).length > 0) {
+      setStatus('idle')
+      return
+    }
+
+    setStatus('submitting')
+    setFormError('')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: values.name.trim(),
+          phone: values.phone.trim(),
+          email: values.email.trim(),
+          role: values.role,
+          message: values.message.trim(),
+          company: values.company,
+        }),
+      })
+
+      const result = await response.json().catch(() => ({}))
+
+      if (!response.ok) {
+        throw new Error(result.error || 'We could not send your message right now.')
+      }
+
+      setStatus('success')
+      setValues(initialValues)
+    } catch (error) {
+      setStatus('error')
+      setFormError(error.message || 'We could not send your message right now.')
+    }
   }
+
+  const isSubmitting = status === 'submitting'
 
   return (
     <div className="contrast-surface h-full rounded-lg border border-surface-container bg-surface-container-lowest p-stack-lg shadow-card md:p-12">
       <h2 className="text-h2 text-primary-container">Send us a message</h2>
       <form className="mt-stack-lg space-y-stack-md" onSubmit={handleSubmit} noValidate>
+        <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+          <label htmlFor="company">Company</label>
+          <input
+            id="company"
+            name="company"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={values.company}
+            onChange={updateField}
+          />
+        </div>
+
         <div className="grid gap-stack-md md:grid-cols-2">
           <div>
             <label className="block text-label-caps font-semibold uppercase text-on-surface" htmlFor="name">
@@ -84,6 +136,7 @@ export function ContactForm() {
               autoComplete="name"
               value={values.name}
               onChange={updateField}
+              disabled={isSubmitting}
               aria-invalid={Boolean(errors.name)}
               aria-describedby={errors.name ? 'name-error' : undefined}
             />
@@ -101,6 +154,7 @@ export function ContactForm() {
               autoComplete="tel"
               value={values.phone}
               onChange={updateField}
+              disabled={isSubmitting}
               aria-invalid={Boolean(errors.phone)}
               aria-describedby={errors.phone ? 'phone-error' : undefined}
             />
@@ -120,6 +174,7 @@ export function ContactForm() {
             autoComplete="email"
             value={values.email}
             onChange={updateField}
+            disabled={isSubmitting}
             aria-invalid={Boolean(errors.email)}
             aria-describedby={errors.email ? 'email-error' : undefined}
           />
@@ -136,6 +191,7 @@ export function ContactForm() {
             name="role"
             value={values.role}
             onChange={updateField}
+            disabled={isSubmitting}
             aria-invalid={Boolean(errors.role)}
             aria-describedby={errors.role ? 'role-error' : undefined}
           >
@@ -158,23 +214,31 @@ export function ContactForm() {
             name="message"
             value={values.message}
             onChange={updateField}
+            disabled={isSubmitting}
             aria-invalid={Boolean(errors.message)}
             aria-describedby={errors.message ? 'message-error' : undefined}
           />
           <FieldError id="message-error" message={errors.message} />
         </div>
 
-        {submitted ? (
+        {status === 'success' ? (
           <p className="rounded-lg bg-secondary-container p-4 text-body-md font-semibold text-on-secondary-fixed" role="status">
-            Thank you. This local form is ready for a future submission service, and your message has passed validation.
+            Thank you. Your message has been sent, and a confirmation email is on its way to you.
+          </p>
+        ) : null}
+
+        {formError ? (
+          <p className="rounded-lg border-2 border-error bg-error-container p-4 text-body-md font-semibold text-on-error-container" role="alert">
+            {formError}
           </p>
         ) : null}
 
         <button
-          className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-primary-container px-8 py-3 text-button font-semibold text-white transition-colors hover:bg-primary md:w-auto"
+          className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-primary-container px-8 py-3 text-button font-semibold text-white transition-colors hover:bg-primary disabled:cursor-not-allowed disabled:opacity-70 md:w-auto"
           type="submit"
+          disabled={isSubmitting}
         >
-          Send Enquiry
+          {isSubmitting ? 'Sending…' : 'Send Enquiry'}
           <Send aria-hidden="true" className="h-5 w-5" />
         </button>
       </form>
