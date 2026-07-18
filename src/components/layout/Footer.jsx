@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Mail, MapPin } from 'lucide-react'
 import { footerLinks, navigationLinks } from '../../content/navigation'
 import { site } from '../../content/site'
 
@@ -11,6 +12,18 @@ export function Footer() {
           <p className="contrast-muted mt-stack-sm max-w-sm text-body-md text-on-surface-variant">
             Warm, person-centred NDIS support across {site.serviceArea}.
           </p>
+          <ul className="contrast-muted mt-stack-lg space-y-2 text-sm text-on-surface-variant" role="list">
+            <li className="flex items-start gap-2">
+              <Mail aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-secondary" />
+              <a href={`mailto:${site.email}`} className="rounded transition-colors hover:text-primary-container">
+                {site.email}
+              </a>
+            </li>
+            <li className="flex items-start gap-2">
+              <MapPin aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-secondary" />
+              <span>{site.address}</span>
+            </li>
+          </ul>
           <p className="contrast-muted mt-stack-md text-sm text-on-surface-variant">
             © {site.year} {site.name}. {site.ndisStatus}.
           </p>

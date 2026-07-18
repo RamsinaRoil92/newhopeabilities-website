@@ -7,8 +7,6 @@ export const site = {
   url: 'https://newhopeabilities.com.au',
   localUrl: 'http://localhost:5173',
   email: 'contact@newhopeabilities.com.au',
-  phone: '1300 000 000',
-  phoneHref: 'tel:1300000000',
   address: '470 St Kilda Rd, Melbourne VIC 3004',
   addressStreet: '470 St Kilda Rd',
   addressLocality: 'Melbourne',

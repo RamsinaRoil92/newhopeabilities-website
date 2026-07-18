@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail } from 'lucide-react'
+import { MapPin, Mail } from 'lucide-react'
 import { site } from '../../content/site'
 
 export function Footer() {
@@ -11,17 +11,15 @@ export function Footer() {
             Compassionate disability support — proudly based in Melbourne, Victoria.
           </p>
           <ul className="mt-stack-lg space-y-2 text-sm text-on-surface-variant" role="list">
-            <li className="flex items-center gap-2">
-              <MapPin aria-hidden="true" className="h-4 w-4 shrink-0 text-secondary" />
+            <li className="flex items-start gap-2">
+              <Mail aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-secondary" />
+              <a href={`mailto:${site.email}`} className="transition-colors hover:text-primary-container">
+                {site.email}
+              </a>
+            </li>
+            <li className="flex items-start gap-2">
+              <MapPin aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-secondary" />
               <span>{site.address}</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <Phone aria-hidden="true" className="h-4 w-4 shrink-0 text-secondary" />
-              <a href={site.phoneHref} className="transition-colors hover:text-primary-container">{site.phone}</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <Mail aria-hidden="true" className="h-4 w-4 shrink-0 text-secondary" />
-              <a href={`mailto:${site.email}`} className="transition-colors hover:text-primary-container">{site.email}</a>
             </li>
           </ul>
           <p className="mt-stack-md text-sm text-on-surface-variant">
@@ -33,10 +31,10 @@ export function Footer() {
           <p className="mb-stack-sm text-label-caps font-semibold uppercase text-primary-container">Quick Links</p>
           <ul className="space-y-2">
             {[
-              { href: '#home',     label: 'Home' },
-              { href: '#about',    label: 'About Us' },
+              { href: '#home', label: 'Home' },
+              { href: '#about', label: 'About Us' },
               { href: '#services', label: 'Services' },
-              { href: '#contact',  label: 'Contact' },
+              { href: '#contact', label: 'Contact' },
             ].map((link) => (
               <li key={link.href}>
                 <a className="rounded text-on-surface-variant transition-colors hover:text-primary-container" href={link.href}>

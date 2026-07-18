@@ -1,8 +1,7 @@
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { Mail, MapPin } from 'lucide-react'
 import { site } from '../../content/site'
 
 const details = [
-  { label: 'Call Us', value: site.phone, href: site.phoneHref, icon: Phone },
   { label: 'Email Us', value: site.email, href: `mailto:${site.email}`, icon: Mail },
   { label: 'Location', value: site.address, icon: MapPin },
 ]

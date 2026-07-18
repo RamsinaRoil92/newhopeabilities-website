@@ -10,7 +10,6 @@ export function buildLocalBusinessSchema() {
     legalName: site.legalName,
     url: site.url,
     description: site.description,
-    telephone: site.phone,
     email: site.email,
     priceRange: '$$',
     image: `${site.url}/images/hero-cafe-melbourne.webp`,
@@ -28,7 +27,6 @@ export function buildLocalBusinessSchema() {
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: site.phone,
       email: site.email,
       contactType: 'NDIS support enquiries',
       areaServed: 'AU-VIC',
