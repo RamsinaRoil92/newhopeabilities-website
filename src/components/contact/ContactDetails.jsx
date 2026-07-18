@@ -4,7 +4,7 @@ import { site } from '../../content/site'
 const details = [
   { label: 'Call Us', value: site.phone, href: site.phoneHref, icon: Phone },
   { label: 'Email Us', value: site.email, href: `mailto:${site.email}`, icon: Mail },
-  { label: 'Location', value: `Proudly serving ${site.serviceArea}.`, icon: MapPin },
+  { label: 'Location', value: site.address, icon: MapPin },
 ]
 
 export function ContactDetails() {

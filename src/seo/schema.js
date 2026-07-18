@@ -20,8 +20,10 @@ export function buildLocalBusinessSchema() {
     },
     address: {
       '@type': 'PostalAddress',
+      streetAddress: site.addressStreet,
       addressLocality: site.addressLocality,
       addressRegion: site.addressRegion,
+      postalCode: site.addressPostcode,
       addressCountry: site.addressCountry,
     },
     contactPoint: {
