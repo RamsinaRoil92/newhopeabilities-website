@@ -9,9 +9,11 @@ export function NdisProviderPanel() {
           <CheckCircle2 aria-hidden="true" className="h-16 w-16" />
         </div>
         <div>
-          <h2 className="text-h2 text-primary-container">Registered NDIS Provider</h2>
+          <h2 className="text-h2 text-primary-container">NDIS Registration in Progress</h2>
           <p className="contrast-muted mt-stack-sm max-w-3xl text-body-md text-on-surface-variant">
-            We work to the NDIS Practice Standards and keep quality, safety, and clear communication at the centre of our service. You can expect support that is planned with you, reviewed with care, and delivered by people who understand their responsibilities.
+            We are currently completing our NDIS provider registration. Quality, safety,
+            dignity, and clear communication remain at the centre of how we are preparing
+            our services.
           </p>
         </div>
       </div>

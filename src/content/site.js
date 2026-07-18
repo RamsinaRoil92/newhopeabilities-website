@@ -14,7 +14,7 @@ export const site = {
   addressCountry: 'AU',
   serviceArea: 'Greater Melbourne',
   year: new Date().getFullYear(),
-  ndisStatus: 'Registered NDIS Provider',
+  ndisStatus: 'NDIS registration in progress',
 }
 
 export const imagePrompts = [
