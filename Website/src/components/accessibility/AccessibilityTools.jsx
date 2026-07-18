@@ -41,7 +41,7 @@ export function AccessibilityTools({ compact = false }) {
       </div>
       <button
         type="button"
-        aria-label="Toggle high contrast mode"
+        aria-label={highContrast ? 'Turn off high contrast mode' : 'Turn on high contrast mode'}
         aria-pressed={highContrast}
         onClick={() => setHighContrast((currentValue) => !currentValue)}
         className={classNames(
@@ -52,7 +52,7 @@ export function AccessibilityTools({ compact = false }) {
         )}
       >
         <Contrast aria-hidden="true" className="h-4 w-4" />
-        <span>{compact ? 'Contrast' : 'High contrast'}</span>
+        <span>{compact ? (highContrast ? 'Contrast on' : 'Contrast') : highContrast ? 'High contrast on' : 'High contrast'}</span>
       </button>
     </div>
   )

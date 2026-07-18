@@ -76,24 +76,149 @@ img {
   font-size: 125%;
 }
 
-.high-contrast {
+/* High contrast mode: applied on <html>, overrides Tailwind utilities site-wide */
+html.high-contrast {
+  color-scheme: dark;
+  background: #000000;
   color: #ffffff;
-  background: #050910;
 }
 
-.high-contrast body,
-.high-contrast #root {
-  background: #050910;
+html.high-contrast body,
+html.high-contrast #root {
+  background: #000000 !important;
+  color: #ffffff !important;
 }
 
-.high-contrast .contrast-surface {
-  color: #ffffff;
-  background: #0d1524;
-  border-color: #ffffff;
+html.high-contrast [class*='bg-background'],
+html.high-contrast [class*='bg-surface'],
+html.high-contrast [class*='bg-white'],
+html.high-contrast [class*='bg-linen'],
+html.high-contrast [class*='bg-primary'],
+html.high-contrast [class*='bg-secondary'],
+html.high-contrast [class*='bg-on-primary'] {
+  background-color: #000000 !important;
+  background-image: none !important;
 }
 
-.high-contrast .contrast-muted {
-  color: #f1f0f4;
+html.high-contrast header,
+html.high-contrast footer,
+html.high-contrast main,
+html.high-contrast .contrast-surface {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  backdrop-filter: none !important;
+}
+
+html.high-contrast header {
+  border-bottom: 2px solid #ffffff !important;
+}
+
+html.high-contrast footer {
+  border-top: 2px solid #ffffff !important;
+}
+
+html.high-contrast h1,
+html.high-contrast h2,
+html.high-contrast h3,
+html.high-contrast h4,
+html.high-contrast p,
+html.high-contrast span,
+html.high-contrast li,
+html.high-contrast label,
+html.high-contrast strong,
+html.high-contrast [class*='text-'] {
+  color: #ffffff !important;
+}
+
+html.high-contrast .contrast-muted,
+html.high-contrast [class*='text-on-surface-variant'],
+html.high-contrast [class*='text-primary-fixed'],
+html.high-contrast [class*='text-primary-container'],
+html.high-contrast [class*='text-secondary'] {
+  color: #ffff00 !important;
+}
+
+html.high-contrast a {
+  color: #ffff00 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+html.high-contrast a:hover,
+html.high-contrast a:focus-visible {
+  color: #ffffff !important;
+  background-color: #1a1a1a !important;
+}
+
+html.high-contrast [class*='border-'] {
+  border-color: #ffffff !important;
+}
+
+html.high-contrast button,
+html.high-contrast a.px-6 {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: none !important;
+  text-decoration: none;
+}
+
+html.high-contrast button:hover,
+html.high-contrast a.px-6:hover {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+  border-color: #ffff00 !important;
+}
+
+html.high-contrast button[aria-pressed='true'] {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+  border-color: #ffff00 !important;
+}
+
+html.high-contrast input,
+html.high-contrast textarea,
+html.high-contrast select {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: none !important;
+}
+
+html.high-contrast input::placeholder,
+html.high-contrast textarea::placeholder {
+  color: #ffff00 !important;
+  opacity: 1;
+}
+
+html.high-contrast img {
+  border: 2px solid #ffffff;
+  filter: contrast(1.15);
+}
+
+html.high-contrast :focus-visible {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 3px;
+  box-shadow: none !important;
+}
+
+html.high-contrast ::selection {
+  color: #000000;
+  background: #ffff00;
+}
+
+html.high-contrast [class*='shadow'],
+html.high-contrast [class*='from-primary'],
+html.high-contrast [class*='via-primary'],
+html.high-contrast [class*='to-primary'],
+html.high-contrast [class*='bg-gradient'] {
+  box-shadow: none !important;
+}
+
+html.high-contrast section [class*='bg-gradient'],
+html.high-contrast section > div[aria-hidden='true'] {
+  background: linear-gradient(to right, #000000 0%, #000000 42%, transparent 78%) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

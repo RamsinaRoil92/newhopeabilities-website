@@ -16,6 +16,16 @@
       rel="stylesheet"
     />
     <title>NewHope Abilities | NDIS Support in Melbourne</title>
+    <script>
+      try {
+        if (localStorage.getItem('nha-high-contrast') === 'true') {
+          document.documentElement.classList.add('high-contrast')
+        }
+        var textSize = localStorage.getItem('nha-text-size')
+        if (textSize === 'large') document.documentElement.classList.add('text-size-large')
+        if (textSize === 'larger') document.documentElement.classList.add('text-size-larger')
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>
