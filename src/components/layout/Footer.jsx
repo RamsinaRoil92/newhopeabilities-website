@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="contrast-surface border-t border-surface-variant bg-surface-container-lowest text-primary-container">
       <div className="mx-auto grid w-full max-w-container-max gap-8 px-margin-mobile py-12 md:grid-cols-[1.2fr_1fr_1fr] md:px-margin-desktop">
         <div>
-          <SiteLogo className="h-14" />
+          <SiteLogo className="h-16" />
           <p className="contrast-muted mt-stack-sm max-w-sm text-body-md text-on-surface-variant">
             Warm, person-centred NDIS support across {site.serviceArea}.
           </p>

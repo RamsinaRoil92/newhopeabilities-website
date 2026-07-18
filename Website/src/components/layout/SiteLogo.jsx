@@ -1,14 +1,14 @@
 import { site } from '../../content/site'
 import { classNames } from '../../utils/classNames'
 
-export function SiteLogo({ className = 'h-12' }) {
+export function SiteLogo({ className = 'h-14' }) {
   return (
     <img
-      src="/images/newhope-abilities-logo.png"
+      src="/images/newhope-logo.png"
       alt={site.name}
-      className={classNames('w-auto', className)}
-      width={180}
-      height={180}
+      className={classNames('w-auto max-w-none object-contain object-left', className)}
+      width={420}
+      height={360}
       decoding="async"
     />
   )

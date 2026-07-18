@@ -27,7 +27,7 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-surface-container-high bg-surface-container-lowest/95 shadow-sm backdrop-blur">
       <div className="mx-auto flex h-20 w-full max-w-container-max items-center justify-between gap-4 px-margin-mobile md:px-margin-desktop">
         <Link to="/" className="shrink-0 rounded-lg" aria-label={`${site.name} home`}>
-          <SiteLogo className="h-12 md:h-14" />
+          <SiteLogo className="h-14 md:h-16" />
         </Link>
 
         <nav className="hidden items-center gap-2 lg:flex" aria-label="Main navigation">
